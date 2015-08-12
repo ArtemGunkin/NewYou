@@ -1,0 +1,4 @@
+class AddColumnToOrders < ActiveRecord::Migration
+  def change
+  end
+end

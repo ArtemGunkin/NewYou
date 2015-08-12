@@ -1,4 +1,8 @@
-<%= form_for(@order), :html => {:multipart => true } do |f| %>
+
+<div class="container">
+  <div class="row-fluid">
+    <div class="span4 well">
+<%= simple_form_for @order, :html => {:multipart => true } do |f| %>
   <% if @order.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
@@ -34,3 +38,6 @@
     <%= f.submit %>
   </div>
 <% end %>
+</div>
+</div>
+</div>

@@ -1,28 +1,35 @@
-<%= bootstrap_devise_error_messages! %>
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h4><%= t('.sign_up', :default => "Sign up") %></h4>
-  </div>
-  <div class="panel-body">
-    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { role: "form" }) do |f| %>
-      <div class="form-group">
-        <%= f.label :username %>
-        <%= f.text_field :username, autofocus: true, class: "form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :email %>
-        <%= f.email_field :email, class: "form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :password %><br />
-        <%= f.password_field :password, class: "form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :password_confirmation %>
-        <%= f.password_field :password_confirmation, class: "form-control" %>
-      </div>
-      <%= f.submit t('.sign_up', :default => "Sign up"), class: "btn btn-primary" %>
+
+
+<div class="regbutton"><h2>Sign up</h2>
+</div>
+ <div class="container">
+  <div class="span4 well">
+    <div class="col-sm-offset-2.col-sm-10">
+       <%=simple_form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:class => 'form-horizontal' }) do |m| %>
+
+         <div class="user_input">
+           <div class="form-group">
+            <div class="col-sm-6">
+              <%= m.input :username%>
+              <%=m.input :email %>
+              <%=m.input :password %>
+              <%=m.input :password_confirmation %>
+     	      <%= m.radio_button :user_type, 'perfomer' %> 
+  		<%= m.label :user_type, 'perfomer', :value => 'perfomer' %>
+  		<%= m.radio_button :user_type, 'client',:checked => true %>
+  		<%= m.label :user_type, 'client', :value => 'client' %>
+           </div> 
+          </div> 
+        </div>
+      
+      <div class="regbutton">
+          <%=m.button :submit %><br />
+       or <br />
+          <%= render "devise/shared/links" %>
+        </div>
+
     <% end %>
+
   </div>
 </div>
-<%= render "devise/shared/links" %>
+</div>

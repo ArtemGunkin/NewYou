@@ -1,6 +1,25 @@
-<% if user_signed_in? %>
-    <span>Здравствуйте, <%= current_user.username %></span>
-    <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
-<% else %>
-    <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
-<% end %>
+<div class="regbutton"><h1>Home page</h1></div>
+<div class="container">
+  <div class="span4 well">
+      
+        <h1>New You</h1>
+         <% if !user_signed_in? %>
+        <div class="lead">Small service to upgrade your photos :) <br />↓↓↓</div>
+       
+       
+        <div class="regbutton"> <%= link_to "Sign up!", new_user_registration_path, class: "btn btn-lg btn-default" %></div>
+        <div class="regpart">or <br />
+        	<%= link_to "Log in", new_user_session_path %>
+        </div>
+        <% else %>
+         <div class="regbutton"><h5>You are logged in. </h5></div>
+          <div class="regpart">Unhappy?<br />↓<br/>
+        	<%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
+        </div>
+        <% end %>
+       
+
+
+      </div>
+  </div>
+  

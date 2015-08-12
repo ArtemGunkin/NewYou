@@ -15,7 +15,7 @@ $(document).ready ->
             .val('');
           $(xhr.responseText).hide().insertAfter($(this)).show('slow')
 
- $(document).ready
+ $(document)
         .on "ajax:beforeSend", ".comment", ->
           $(this).fadeTo('fast', 0.5)
         .on "ajax:success", ".comment", ->

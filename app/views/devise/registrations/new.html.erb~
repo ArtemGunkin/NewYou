@@ -1,4 +1,6 @@
-<div class="regbutton"><h2>Edit profile</h2>
+
+
+<div class="regbutton"><h2>Sign up</h2>
 </div>
  <div class="container">
   <div class="span4 well">
@@ -12,8 +14,10 @@
               <%=m.input :email %>
               <%=m.input :password %>
               <%=m.input :password_confirmation %>
-              <%=m.input :current_password %>
-     
+     	      <%= m.radio_button :user_type, 'perfomer', :checked => true %> 
+  		<%= m.label :user_type, 'perfomer', :value => 'perfomer' %>
+  		<%= m.radio_button :user_type, 'client' %>
+  		<%= m.label :user_type, 'client', :value => 'client' %>
            </div> 
           </div> 
         </div>
@@ -29,4 +33,3 @@
   </div>
 </div>
 </div>
-

@@ -16,8 +16,8 @@
               <%=m.input :password_confirmation %>
      	        <%= m.radio_button :user_type, 'Заказчик', checked: true%>
                <%= m.label :user_type, 'Заказчик'%>
-               <%= m.radio_button :user_type, 'Испольнитель'%>
-               <%=m.label :user_type, 'Испольнитель'%>
+               <%= m.radio_button :user_type, 'Исполнитель'%>
+               <%=m.label :user_type, 'Исполнитель'%>
            </div> 
           </div> 
         </div>
@@ -25,7 +25,7 @@
       <div class="regbutton">
           <%=m.button :submit %><br />
        or <br />
-          <%= render "devise/shared/links" %>
+         
         </div>
 
     <% end %>

@@ -11,9 +11,9 @@
 // about supported directives.
 //
 //= require jquery
-//= require turbolinks
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require select2
 //= require select2_locale_"ru"
+//= require turbolinks
 //= require_tree .

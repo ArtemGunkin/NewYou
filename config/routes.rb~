@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   
   get 'users/profile'
 
- resources :orders do 
+ resources :orders  
  	resources :comments, :only => [:create, :destroy]
- end
+ 
   devise_for :users
   get 'welcome/index' => 'welcome#index'
   get 'users/profile', as: 'user_root'

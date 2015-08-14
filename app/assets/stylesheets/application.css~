@@ -12,6 +12,8 @@
  *
  *= require_tree .
  *= require_self
+*= require select2
+*= require select2-bootstrap
  # LESS
  *= require devise_bootstrap_views_less
  */
@@ -31,7 +33,7 @@
 body {
 
      background-color: #fff;
-  color: #333;
+ 
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -57,7 +59,7 @@ h6 {
 p {
     font-size: 1.25em;
     line-height: 1.6;
-    color: #000;
+
 }
 
 .input-group {
@@ -65,12 +67,12 @@ p {
     left: 50%;
 }
 .text {
-    color: white;
+
     text-align:  center;
 }
 
 .errortext {
-    color: white;   
+    color: black;   
 }
 
 .regbutton {

@@ -14,10 +14,10 @@
               <%=m.input :email %>
               <%=m.input :password %>
               <%=m.input :password_confirmation %>
-     	      <%= m.radio_button :user_type, 'perfomer' %> 
-  		<%= m.label :user_type, 'perfomer', :value => 'perfomer' %>
-  		<%= m.radio_button :user_type, 'client',:checked => true %>
-  		<%= m.label :user_type, 'client', :value => 'client' %>
+     	        <%= m.radio_button :user_type, 'Заказчик', checked: true%>
+               <%= m.label :user_type, 'Заказчик'%>
+               <%= m.radio_button :user_type, 'Исполнитель'%>
+               <%=m.label :user_type, 'Исполнитель'%>
            </div> 
           </div> 
         </div>

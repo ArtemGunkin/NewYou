@@ -6,6 +6,7 @@ gem 'acts-as-taggable-on'
 gem 'carrierwave'
 gem "acts_as_commentable_with_threading"
 gem 'simple_form'
+gem "select2-rails"
 
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 

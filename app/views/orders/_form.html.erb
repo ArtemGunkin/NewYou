@@ -1,4 +1,6 @@
-
+ <script>
+        $(document).ready(function() {$(".category").select2(); });
+    </script>
 <div class="container">
   <div class="row-fluid">
     <div class="span4 well">
@@ -33,6 +35,10 @@
   <div class="field">
     <%= f.label :time %><br>
     <%= f.text_field :time %>
+  </div>
+  <div class="field">
+ <% @order.tag_list.add("first","second","third") %>
+<%= select_tag :tag_list, options_for_select([ "VISA", "MasterCard" ]),  {:multiple => true, :class => "category", :style => "width:450px;" } %>
   </div>
   <div class="actions">
     <%= f.submit %>

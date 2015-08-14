@@ -27,8 +27,8 @@
         <td><%= image_tag order.image_url if order.image? %></td>
         <td><%= order.price %></td>
         <td><%= order.time %></td>
-	
-	
+	Tags: <%= raw order.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
+
         <td><%= link_to 'Show', order %></td>
 <% if ( order.user_id == current_user.id)%>
         <td><%= link_to 'Edit', edit_order_path(order) %></td>
@@ -41,7 +41,7 @@
 
 <br>
 
-<%= link_to 'New Order', new_order_path %>
+<%= link_to 'New Order', new_order_path %> 
 </div>
 </div>
 </div>

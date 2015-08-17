@@ -9,46 +9,14 @@
 
 <div class="col-lg-4 col-md-4">
   <div class="form">
-    <form role="form">
+
     <div class="form-group">
-      <%= form_for(resource, as: resource_name, url: session_path(resource_name), 
-      :html => {:class => 'form-horizontal' }) do |f| %>
-            <div class="form-group">
-                <%=f.email_field :email, :class=>"form-control", :placeholder=>"Email" %> 
-            </div>
-            <div class="form-group">
-              <%=f.text_field :password, :class=>"form-control", :placeholder=>"Пароль" %>
-            </div>              
-            <%= f.submit 'Войти', :class => "form-control btn-new" %>
-            <% if devise_mapping.rememberable? -%>
-              <div class="checkbox">
-              <label><%= f.check_box :remember_me %>Запомнить меня</label>
-              </div>
-            <% end %>              
-      <% end %>
-    </form>
+  <%= render 'session' %>           
+
   </div> 
 </div>
 
 <div class="form">
   <h4>Впервые у нас? Присоединяйся!</h4>
-  <form role="form">
-      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), 
-      :html => {:class => 'form-horizontal' }) do |m| %>
-      <div class="form-group">
-        <%= m.text_field :username, :class=>"form-control", :placeholder=>"Имя"%></div>
-      <div class="form-group">
-        <%=m.email_field :email, :class=>"form-control", :placeholder=>"Email" %></div>
-      <div class="form-group">
-        <%=m.text_field :password, :class=>"form-control", :placeholder=>"Пароль" %></div>
-      <div class="form-group">
-        <%=m.text_field :password_confirmation , :class=>"form-control", :placeholder=>"Подтвержение пароля"%>
-      </div>
-      <%= m.submit 'Регистрация', :class => "form-control btn-new" %>
-      <%= m.radio_button :user_type, 'Заказчик', checked: true%>
-      <%= m.label :user_type, 'Заказчик'%> <br>
-      <%= m.radio_button :user_type, 'Исполнитель'%>
-      <%=m.label :user_type, 'Исполнитель'%>
-      <% end %> 
-  </form>
+      <%= render 'new'%>
 </div>

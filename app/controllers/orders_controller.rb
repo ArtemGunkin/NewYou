@@ -33,7 +33,7 @@ end
   def create
     @order = Order.new(order_params)
     @order.user_id = current_user.id
-    @order.tag_list = @order.tag_list[1..-1]
+   
     respond_to do |format|
       if @order.save
         
@@ -78,6 +78,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:title, :desc, :image, :price, :time, :tag_list)
+      params.require(:order).permit(:title, :desc, :image, :price, :time, :tag_list )
     end
 end

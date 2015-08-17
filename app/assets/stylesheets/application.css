@@ -21,147 +21,56 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-@media (min-width: 768px) {
-  .container {
-    max-width: 760px;
-  }
+.welcome {
+font-family: "RobotoRegular";
+src: url("../fonts/RobotoRegular/RobotoRegular.eot");
+src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix")format("embedded-opentype"),
+url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"),
+url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
+font-style: normal;
+font-weight: normal;
+margin-top: 24%;
+margin-left: 10%;
+
+font-size: 30px;
+color: white;
+font-weight: 700;
+text-shadow:
+-1px -1px 0 #000,
+1px -1px 0 #000,
+-1px 1px 0 #000,
+1px 1px 0 #000;
 }
-.container-narrow > hr {
-  margin: 30px 0;
+.welcome h1 {
+font-size: 70px;
+font-weight: 700;
 }
 
 body {
-
-     background-color: #fff;
- 
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-}
-   
-h1{
-    text-align: center;
-   
-}
-
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-    text-transform: uppercase;
-   
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-p {
-    font-size: 1.25em;
-    line-height: 1.6;
+background: url(1.jpg);
+background-size: 100%;
 
 }
 
-.input-group {
-    
-    left: 50%;
-}
-.text {
+.registration {
 
-    text-align:  center;
-}
-
-.errortext {
-    color: black;   
+width: 350px;
+color: white;
+border: 4px;
+background: #292735;/* Цвет фона */
+padding: 10px; /* Поля вокруг текста */
+margin: auto;
+margin-top: 15%;
 }
 
-.regbutton {
-    
-    text-align: center;
-}
-.lead {
-    text-align: center;
-}
-.error {
-    
-    h2 {
-    text-align: center;
-    font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px;
-    margin-bottom: 0px;
-    
-  }
-  
-}
-.regpart {
-    font-size: 14px;
-    text-align: center;
-}
+.session {
 
-.profilebutton {
-    text-align: center;
-    margin-left: 37%;
-}
-.todayevents {
-    font-size: 20px;
-  position:absolute;
-
-    left:7%;
-
-    top:16%;
+width: 350px;
+color: white;
+border: 4px;
+background: #292735;/* Цвет фона */
+padding: 10px; /* Поля вокруг текста */
+margin: auto;
+margin-top: 5%;
 
 }
-.regbutton1 {
-
-     position: absolute;
-     left: 39%;
-    
-}
-.userbutton {
-    position: absolute;
-    top: 42%;
-    left: 42%;
-}
-
-
-
-.navbar-default {
-  border-radius: 0px 0px 10px 10px;
-  max-width: 730px;
-  margin: 0 auto;
-}
-
-.user_input {
-  margin-left: 35%;
-  text-align: center;
-
-}
-
-.showevent {
-    margin-left: 27%;
-}
-
-.showbuttons {
-    .btn-default{
-    width: 120px;
-    }
-}
-
-.dtpicker {
-    margin-left:16%;
-   
-}
-.errort {
-
-
-    text-align: center;
-    font-size: 13px;
-    list-style: square;
-  }
-
-
-
-
-

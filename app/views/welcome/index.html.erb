@@ -1,25 +1,68 @@
-<div class="regbutton"><h1>Home page</h1></div>
-<div class="container">
-  <div class="span4 well">
-      
-        <h1>New You</h1>
-         <% if !user_signed_in? %>
-        <div class="lead">Small service to upgrade your photos :) <br />↓↓↓</div>
-       
-       
-        <div class="regbutton"> <%= link_to "Sign up!", new_user_registration_path, class: "btn btn-lg btn-default" %></div>
-        <div class="regpart">or <br />
-        	<%= link_to "Log in", new_user_session_path %>
-        </div>
-        <% else %>
-         <div class="regbutton"><h5>You are logged in. </h5></div>
-          <div class="regpart">Unhappy?<br />↓<br/>
-        	<%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
-        </div>
-        <% end %>
-       <%= render 'new' %>
-
-
-      </div>
+<div class="col-lg-6 col-md-6">
+  <div class="welcome">
+      <h1>New you</h1>
+      <h2>Сервис по преображению фотографий</h2> </br>
+      <p>У вас есть фотографии, которые нужно редактировать, но нет специалиста
+      под рукой? Или же вы отлично владеете фото-редактором, но не знаете как на этом заработать? Тогда вам сюда!</p>
   </div>
+</div>
+<div class="col-lg-6 col-md-6">
+  <div class="registration">
+  <h3>Войти</h3>
+  <form role="form">
+   <div class="form-group">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => 'form-horizontal' }) do |f| %>
+         <div class="form-group">
+                <%=f.email_field :email, :class=>"form-control", :placeholder=>"Почта" %> </div>
+
+            <div class="form-group">
+              <%=f.text_field :password, :class=>"form-control", :placeholder=>"Пароль" %></div>
   
+
+               <% if devise_mapping.rememberable? -%>
+              <div class="checkbox">
+                <label><%= f.check_box :remember_me %>Remember me</label>
+                
+              </div>
+
+              <% end %>
+
+
+        <%=f.submit %>
+
+      <% end %>
+      </form>
+    </div> 
+  </div>
+
+    <div class="session">
+      <h3>Впервые у нас? Зарегестрируйтесь!</h3>
+       <form role="form">
+          <div class="form-group">
+
+     
+       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:class => 'form-horizontal' }) do |m| %>
+
+       <div class="form-group">
+              <%= m.text_field :username, :class=>"form-control", :placeholder=>"Имя"%></div>
+              <div class="form-group">
+              <%=m.email_field :email, :class=>"form-control", :placeholder=>"Почта" %></div>
+              <div class="form-group">
+              <%=m.text_field :password, :class=>"form-control", :placeholder=>"Пароль" %></div>
+              <div class="form-group">
+              <%=m.text_field :password_confirmation , :class=>"form-control",:placeholder=>"Подтвержение"%></div>
+              <%= m.radio_button :user_type, 'Заказчик', checked: true%>
+               <%= m.label :user_type, 'Заказчик'%>
+               <%= m.radio_button :user_type, 'Исполнитель'%>
+               <%=m.label :user_type, 'Исполнитель'%>
+        
+ 
+          <%=m.submit %><br />
+  
+
+    <% end %> 
+        </div>
+      </form>
+    </div>
+
+</div>

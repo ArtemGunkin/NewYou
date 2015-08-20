@@ -1,47 +1,54 @@
 
+    <div class="row padding-100">
+      <div class="col-lg-3 grey">
+        <div class="category red">
+          <h3 class="category">Категории</h3>
+      
+       <% tag_cloud Order.tag_counts, {} do |tag| %>
 
 
-<div class="regbutton"><h1>Listing Orders</h1></div>
+          <ul>
+            <li><%= link_to tag.name, tag_path(tag.name) %></li>
+      
+          </ul>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-lg-9 order-list">
+      <%= @orders.each do |order| %>
+   <div class="order">
+<img src=""></img>
+<div>
 
-<div class="container">
-  <div class="row-fluid">
-    <div class="span4 well">
-<p id="notice"><%= notice %></p>
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Desc</th>
-      <th>Image</th>
-      <th>Price</th>
-      <th>Time</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<h3><%=order.title %></h3>
 
-  <tbody>
-    <% @orders.each do |order| %>
-      <tr>
-        <td><%= order.title %></td>
-        <td><%= order.desc %></td>
-        <td><%= image_tag order.image_url if order.image? %></td>
-        <td><%= order.price %></td>
-        <td><%= order.time %></td>
-	Tags: <%= raw order.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
+<p class="comment"><%=order.desc%></p>
+<ul class="hr">
 
-        <td><%= link_to 'Show', order %></td>
-<% if ( order.user_id == current_user.id)%>
-        <td><%= link_to 'Edit', edit_order_path(order) %></td>
-        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<li><%=order.created_at%></li>
+<li>ответа</li>
+<li><%=order.price %>руб</li>
+
+</ul>
+
+</div>
+<hr>
 <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+</div>
 
-<br>
 
-<%= link_to 'New Order', new_order_path %> 
+
+
 </div>
-</div>
-</div>
+
+      </div>
+      
+    </div>
+
+
+
+
+
+
+
+

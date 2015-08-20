@@ -1,4 +1,8 @@
-<div class="col-lg-9 order-list">
+<div class="col-lg-9 order-list1">
+
+<% if @orders.empty? %>
+<h1> Список ваших заказов пуст. Чтобы создать заказ, нажмите кнопку на верхней панели </h1>
+<% else %>
 <%= @orders.each do |order| %>
 <div class="order">
 <img src=""></img>
@@ -18,7 +22,7 @@
 </div>
 <hr>
 <% end %>
-</div>
+</div> <% end %>
 
 
 

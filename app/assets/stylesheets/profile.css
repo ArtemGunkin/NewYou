@@ -1,0 +1,69 @@
+.order-list {
+background-color: #292735;
+min-height: 700px;
+margin: 10%;
+margin-top: 5%;
+width: 80%;
+}
+
+ul{
+list-style: none;
+}
+
+.category ul li {
+margin: 25px 0 25px -20px;
+}
+
+.category ul li:hover {
+background-color: red;
+height: 20px;
+}
+
+.order img {
+border-radius: 50%;
+display: inline-block;
+margin: 20px; 10px 0 20px;
+height: 70px;
+width: 70px;
+}
+
+.order h3 {
+color: white;
+text-transform: uppercase;
+font-size: 18px;
+display: block;
+vertical-align: top;
+}
+
+.order hr {
+margin:10px 20px 0 20px;
+}
+
+.order div {
+vertical-align: top;
+margin: 0;
+display: inline-block;
+}
+
+.order div .comment{
+color: white;
+display: block;
+}
+
+.order > p {
+margin-right: 30px;
+color: white;
+display: inline-block;
+}
+
+ul.hr {
+margin: -5px;
+padding: 4px;
+}
+ul.hr li {
+display: inline;
+margin-right: 5px;
+color: white;
+padding: 3px;
+
+}

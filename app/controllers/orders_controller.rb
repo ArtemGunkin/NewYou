@@ -16,7 +16,7 @@ end
   # GET /orders/1.json
   def show
 	@comments = @order.comment_threads.order('created_at desc')
-        @new_comment = Comment.build_from(@order, current_user.id, "")
+   @new_comment = Comment.build_from(@order, current_user.id, "")
   end
 
   # GET /orders/new

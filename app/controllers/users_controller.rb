@@ -7,5 +7,9 @@ end
   	request.referrer
   end
   def profile
+  	@orders = Order.where(user_id: current_user.id)
+
+
+
   end
 end

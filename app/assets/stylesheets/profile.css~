@@ -1,0 +1,55 @@
+h1 {
+  text-transform: uppercase;
+  font-size: 70px;
+  font-weight: 300;
+}
+
+p {
+	font-size: 18px;
+}
+
+.welcome {
+	padding-left: 50px;
+}
+
+body {
+  color: white;
+  background: url(background.png) no-repeat;
+  -moz-background-size: 100%; /* Firefox 3.6+ */
+  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%; /* Opera 9.6+ */
+  background-size: 100%; /* Современные браузеры */
+}
+
+.form {
+  width: 350px;
+  color: white;
+  background: #292735;/* Цвет фона */
+  padding: 25px; /* Поля вокруг текста */
+  margin: auto;
+  margin-top: 10px;
+}
+
+h4 {
+	font-size: 16px;
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+.checkbox {
+	vertical-align: bottom;
+	margin: 0;
+}
+
+.btn-new {
+	background-color: #4d4966;
+	color: white;
+	border: 0;
+	float: right;
+	width: 50%;
+}
+
+.user-type {
+	width: 50%;
+	display: inline-block;
+}

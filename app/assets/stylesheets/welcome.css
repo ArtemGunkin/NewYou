@@ -9,7 +9,7 @@ p {
 }
 
 .welcome {
-	padding-left: 50px;
+	padding-left: 10%;
 }
 
 body {
@@ -37,6 +37,7 @@ h4 {
 }
 
 .checkbox {
+  display: inline-block;
 	vertical-align: bottom;
 	margin: 0;
 }
@@ -52,4 +53,8 @@ h4 {
 .user-type {
 	width: 50%;
 	display: inline-block;
+}
+
+.input-form {
+  padding-bottom: 15px;
 }

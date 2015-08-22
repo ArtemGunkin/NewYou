@@ -1,46 +1,36 @@
-
-    <div class="row padding-100">
-      <div class="col-lg-3 grey">
-        <div class="category red">
-          <h3 class="category">Категории</h3>
-            <% tag_cloud Order.tag_counts, {} do |tag| %>
-          <ul>
-            <li><%= link_to tag.name, tag_path(tag.name) %></li>
-      
-          </ul>
-          <% end %>
-        </div>
-      </div>
-      <div class="col-lg-9 order-list">
-      <%= @orders.each do |order| %>
-   <div class="order">
-<img src=""></img>
-<div>
-
-<h3><%=order.title %></h3>
-
-<p class="comment"><%=order.desc%></p>
-<ul class="hr">
-
-<li><%=order.created_at%></li>
-<li>ответа</li>
-<li><%=order.price %>руб</li>
-
-</ul>
-
-</div>
-<hr>
-<% end %>
-</div>
-
-
-
-
-</div>
-
-      </div>
-      
+<div class="row padding-100">
+  <div class="col-lg-3 grey">
+    <div class="category red">
+      <h3 class="category">Категории</h3>
+      <% tag_cloud Order.tag_counts, {} do |tag| %>
+      <ul>
+        <li><%= link_to tag.name, tag_path(tag.name) %></li>
+      </ul>
+    <% end %>
     </div>
+  </div>
+
+  <div class="col-lg-9 order-list">
+  <% if @orders.empty? %>
+  <p class="empty-list">Список заказов пуст.</p>
+  <% else %>
+  <%= @orders.each do |order| %>
+    <div class="order">
+      <img src=""></img>
+    <div>
+    <h3><%=order.title %></h3>
+    <p class="comment"><%=order.desc%></p>
+    <ul class="hr">
+      <li><%=order.created_at%></li>
+      <li><%=order.price %>руб</li>
+    </ul>
+    </div></div>
+    <hr>
+  </div>
+</div>
+<div class="trash">
+  <% end end %>
+</div>
 
 
 

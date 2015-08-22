@@ -1,32 +1,27 @@
-
 .btn-new1 {
   background-color: #4d4966;
   color: white;
   border: 0;
-  
   width: 50%;
 }
 
 .neworder {
-
-    width: 80%;
+  width: 80%;
   color: white;
-    background: #292735;/* Цвет фона */
-    margin: 10%;
-
-
+  background: #292735;/* Цвет фона */
+  margin: 10%;
 }
-.leftcol {
-   background: #292735;
-  margin-top: 10%;
+
+.left-col {
+  background: #292735;
   margin-left: 10%;
+  margin-bottom: 10px;
   width: 45%;
   max-height: 100%;
-
-
 }
+
 .form-group {
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 
@@ -35,25 +30,19 @@
    color: white;
    font-weight: 400;
    margin: 10%;
-
 }
 
 .rightcol {
-margin-left: 20px;
-    margin-top:  10%;
-    width: 30%;
-    background: #292735;/* Цвет фона */
-
-  
+  margin-left: 20px;
+  background: #292735;/* Цвет фона */
 }
 
 .orderinstr p {
-  font-size: 20px;
-  padding-bottom: 30px;
-
+  font-size: 16px;
+  padding-bottom: 20px;
 }
 
-.orderinstr h1 {
-  font-size:  30px;
+.orderinstr h3 {
+  font-size:  20px;
 }
 

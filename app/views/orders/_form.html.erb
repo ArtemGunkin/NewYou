@@ -1,31 +1,28 @@
 <div class="container-fluid">
     <div class="row">
-    <div class="col-lg-8 col-md-8 leftcol">
+    <div class="col-lg-8 col-md-8 left-col">
       <div class="neworder">
       <%= form_for @order, :html => {:multipart => true } do |f| %>
             <div class="form-group">
-              <h3> Название задания</h3>
-               <%= f.text_field :title, :class => "form-control" %>
+              <h4> Название задания</h4>
+              <%= f.text_field :title, :class => "form-control" %>
             </div>
             <div class="form-group">
-              <h3>Подробно опишите задание</h3>
+              <h4>Подробно опишите задание</h4>
               <%= f.text_area :desc, :class => "form-control" %>
             </div>
-
               <div class="form-group">
-            <h3>Бюджет</h3>
+            <h4>Бюджет</h4>
                <%= f.text_field :price, :class => "form-control" %>
             </div>
               <div class="form-group">
-              <h3>Специализация проекта</h3>
+              <h4>Специализация проекта</h4>
               <%= f.select :tag_list, options_for_select(["Стиль Low Poly", "Ретушь", "Стиль WPAP", "Цветокоррекция", "Виньетирование", "Макияж", "Накладывание", "Фильтры", "Обработка", "Прочее"]), {}, {:class=>"form-control"} %>
             </div>
               <div class="form-group">
-
-          <h3>Загрузите фотогорфию</h3>
-           <%= f.file_field :image %>
+              <h4>Загрузите фотогорфию</h4>
+              <%= f.file_field :image %>
             </div>
-           
                <%= f.submit 'Опубликовать заказ', :class => "form-control btn-new1" %>
         </form>
       </div>
@@ -33,8 +30,7 @@
     <div class="col-lg-4 col-md-4 rightcol">
       
          <div class="orderinstr">
-              <h1>Последовательность действий</h1> </br>
-
+              <h3>Последовательность действий</h3> </br>
               <p>1. Придумайте краткое и ясное название </p>
               <p>2. Подробно опишите ваши требования по поводу заказа</p>
               <p>3. Задайте бюджет</p>

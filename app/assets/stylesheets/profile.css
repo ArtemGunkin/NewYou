@@ -1,7 +1,7 @@
-
-
-
-
+.empty-list {
+  text-align: center;
+  margin: 20px;
+}
 
 .grey {
   padding-left: 50px;
@@ -10,7 +10,7 @@
 
 .order-list {
   background-color: #292735;
-
+  min-height: 300px;
   padding: 10px;
 }
 
@@ -21,16 +21,16 @@
 .red {
   color: white;
   background-color: #292735;
+  padding-bottom: 20px;
 }
 
 .padding-100{
-  padding-top: 70px;
+  padding: 20px 5%;
 }
 
 h3.category {
-  padding-left: 20px;
+  padding: 20px 0 0 20px;
   padding-top: 20px;
-
 }
 
 ul{
@@ -38,11 +38,14 @@ ul{
 }
 
 .category ul li {
-  margin: 25px 0 25px -20px;
-  font-size: 30px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color:white;
 }
 
-
+.category ul li:hover {
+  background: #292735;
+}
 
 .order img {
   border-radius: 50%;
@@ -70,6 +73,10 @@ ul{
   display: inline-block;
 }
 
+.trash {
+  display: none;
+}
+
 .order div .comment{
   color: white;
   display: block;
@@ -81,20 +88,18 @@ ul{
   display: inline-block;
 }
   
- ul.hr {
-    margin: -5px;
-    padding: 4px;
-   }
-   ul.hr li {
-    display: inline; 
-    margin-right: 5px; 
-    color: white;
-    padding: 3px;
+ul.hr {
+  margin: -5px;
+  padding: 4px;
+}
+ul.hr li {
+  display: inline; 
+  margin-right: 5px; 
+  color: white;
+  padding: 3px;
+}
 
-   }
-
-
-   .order-list1 {
+.order-list1 {
   background-color: #292735;
   width: 80%;
   margin-left: 10%;

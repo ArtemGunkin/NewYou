@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
  resources :orders  
  	resources :comments, :only => [:create, :destroy]
- get 'tags/:tag', to: 'orders#index', as: :tag
+ get 'category/:tag', to: 'orders#index', as: :tag
   devise_for :users
   get 'welcome/index' => 'welcome#index'
   get 'users/profile', as: 'user_root'

@@ -17,6 +17,7 @@
 <% if current_user.user_type == "Заказчик" %>
 <li> <%= link_to "Все заказы", root_path %></li>
 <li> <%= link_to "Мои заказы", user_root_path %></li>
+<li> <%= link_to "СОЗДАТЬ ЗАКАЗ", new_order_path %>
 <% else %>
 <li> <%= link_to "Все работы", root_path %></li>
 <li> <%= link_to "Мои работы", user_root_path %></li>

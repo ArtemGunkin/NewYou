@@ -46,3 +46,32 @@
   font-size:  20px;
 }
 
+.order-desc {
+  background: #292735;
+  padding: 20px 30px;
+  margin: 20px 0 20px 20px;
+  color: white;
+}
+
+.attach {
+  min-height: 100px;
+  min-width: 100px;
+  border: 1px solid white;
+}
+
+.order-comments {
+  background: #292735;
+  padding: 20px 30px;
+  margin: 2px 0 2px 20px;
+  color: white;
+}
+
+.ads {
+  background: #292735;
+  padding: 50px;
+  margin: 20px 20px 0 0;
+  color: white;
+  min-height: 300px;
+  text-align: center;
+}
+

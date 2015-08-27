@@ -1,4 +1,9 @@
-jQuery(function() {
-  $("a[rel~=popover], .has-popover").popover();
-  $("a[rel~=tooltip], .has-tooltip").tooltip();
+$(document).ready(function(){
+    PopUpHide();
 });
+function PopUpShow(){
+    $("#popup1").show();
+}
+function PopUpHide(){
+    $("#popup1").hide();
+}

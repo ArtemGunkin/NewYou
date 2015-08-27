@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150813094749) do
+ActiveRecord::Schema.define(version: 20150824164221) do
 
   create_table "comments", force: :cascade do |t|
     t.integer  "commentable_id"
@@ -54,9 +54,10 @@ ActiveRecord::Schema.define(version: 20150813094749) do
     t.string   "image"
     t.float    "price"
     t.integer  "time"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.integer  "user_id"
+    t.integer  "order_perfomer_id"
   end
 
   create_table "taggings", force: :cascade do |t|

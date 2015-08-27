@@ -19,6 +19,7 @@ end
   # GET /orders/1
   # GET /orders/1.json
   def show
+
 	@comments = @order.comment_threads.order('created_at desc')
    @new_comment = Comment.build_from(@order, current_user.id, "")
   end
@@ -82,6 +83,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:title, :desc, :image, :price, :time, :tag_list )
+      params.require(:order).permit(:title, :desc, :image, :price, :time, :tag_list, :order_perfomer_id )
     end
 end

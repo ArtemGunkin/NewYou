@@ -4,12 +4,43 @@
     <h4>Описание:</h3>
     <p><%= @order.desc %></p>
     <hr>
-    <h4>Бюджет: <%= @order.price %></h4>
+    <h4>Бюджет: <%= @order.price %> рублей</h4>
    
     <hr>
     <h4>Прикрепленные файлы</h3>
-    <img class ="attach" src=""></img>
-    <img class ="attach" src=""></img>
+    <div class="b-container">
+
+    <a href="javascript:PopUpShow()"><%= image_tag(@order.image.thumb) if @order.image? %> </a>
+</div>
+<div class="b-popup" id="popup1">
+    <div class="b-popup-content">
+       <%= image_tag(@order.image) if @order.image? %> 
+    <a href="javascript:PopUpHide()">Скрыть полное изображние</a>
+    </div>
+</div>
+
+
+    <% if !@order.order_perfomer_id.nil?  %>
+         <% if @order.order_perfomer_id == current_user.id %>
+    <h3> Вы взяли этот заказ на обработку </h3>
+    <% else %>
+<h3>Заказ уже принят к обработке дизайнером </h3>
+<% end %> <% end %>
+  <% if current_user.user_type == "Исполнитель" %>
+<% if @order.order_perfomer_id.nil? %>
+
+
+<%= form_for @order do |f| %>
+<%= f.hidden_field :order_perfomer_id, value: current_user.id%>
+
+<%= f.submit "Принять заказ", :class => "form-control"%>
+
+
+
+ <% end %>
+
+
+  <% end %> <% end %>
   </div>
 
   <div class="order-comments">
@@ -19,8 +50,9 @@
   <div class="order-comments"> 
      <%= render :partial => 'comments/comment', :collection => @comments, :as => :comment %>
   </div>
-  <%= link_to 'Edit', edit_order_path(@order) %> |
-  <%= link_to 'Back', orders_path %>
+  <% if @order.user_id == current_user.id %>
+  <%= link_to 'Редактировать заказ', edit_order_path(@order) %> 
+<% end %>
 </div>
 
 <div class="col-lg-3 col-md-3">

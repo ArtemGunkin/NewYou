@@ -1,6 +1,11 @@
+
+<% if @order.user_id == current_user.id %>
 <h1>Editing Order</h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Show', @order %> |
 <%= link_to 'Back', orders_path %>
+<% else %>
+<h3> Sorry you are not order owner </h3>
+<% end %>

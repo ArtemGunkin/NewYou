@@ -8,7 +8,7 @@ end
   end
   def profile
   	@orders = Order.where(user_id: current_user.id)
-
+  	@perfomer = Order.where(order_perfomer_id: current_user.id)
 
 
   end

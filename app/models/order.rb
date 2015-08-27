@@ -4,4 +4,6 @@ class Order < ActiveRecord::Base
 
 	acts_as_taggable
 	acts_as_commentable
+	 validates :price, :presence => true
+	 validates :title, :presence => true
 end

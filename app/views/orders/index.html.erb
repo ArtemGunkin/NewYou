@@ -17,7 +17,7 @@
   <% else %>
   <%= @orders.each do |order| %>
     <div class="order">
-      <img src=""></img>
+<%= image_tag(order.image.thumb1) if order.image? %> 
     <div>
     <h3> <%= link_to order.title, order %></h3>
     <p class="comment"><%=order.desc%></p>

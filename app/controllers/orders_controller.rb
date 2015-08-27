@@ -7,6 +7,7 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
 def index
+@user = current_user
 
   if params[:tag]
     @orders = Order.tagged_with(params[:tag])

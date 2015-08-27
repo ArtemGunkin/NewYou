@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :orders
 validates :user_type, presence: true
+mount_uploader :avatar, ImageUploader
 end

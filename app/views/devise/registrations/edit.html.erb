@@ -17,6 +17,10 @@
     <div class="input-form">
       <%=m.input :current_password, :class=>"form-control", :placeholder=>"Пароль на данный момент" %>
     </div>
+       <div class="input-form">
+       Choose your avatar
+       <%= m.file_field :avatar %>
+    </div>
     <div class="regbutton">
       <%=m.button :submit, :class=>"new-btn1"%><br />
 <!--        or <br />
